@@ -49,3 +49,4 @@ signupForm.addEventListener('submit', e => {
 })
 
 function nombre (){console.log("hola");}
+function apellido (){console.log("adios");}
