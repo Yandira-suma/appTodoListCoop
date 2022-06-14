@@ -47,3 +47,5 @@ signupForm.addEventListener('submit', e => {
         signupError2.innerText = err.message;
     })
 })
+
+function nombre (){console.log("hola");}
