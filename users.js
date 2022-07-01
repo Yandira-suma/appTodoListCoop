@@ -26,7 +26,7 @@ auth.onAuthStateChanged(user => {
         console.log('user is signed in at users.html');
     }
     else {
-        alert('your login session has expired or you have logged out, login again to continue');
+        alert('su sesión de inicio de sesión ha caducado o ha cerrado sesión, vuelva a iniciar sesión para continuar');
         location = "login.html";
     }
 })
