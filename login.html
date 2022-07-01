@@ -34,12 +34,13 @@
             <label for="">Contraseña</label>
             <input type="password" id="login-password" class="form-control" placeholder="Contraseña" required>
             <button type="submit" class="btn btn-success btn-block">LOGIN</button>
-            <br>
+            <br>    </br>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
+             data-auto-logout-link="true" data-use-continue-as="true"></div>
+             <br>    </br>
+            
             <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exampleModal">
                  Registro
-            </br>
-            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default"
-             data-auto-logout-link="false" data-use-continue-as="false"></div>
             
             <div class="container error" id="loginError"></div>
             
@@ -119,10 +120,10 @@
 <script>
     window.fbAsyncInit = function() {
       FB.init({
-        appId      : '{your-app-id}',
+        appId      : '736237240834008',
         cookie     : true,
         xfbml      : true,
-        version    : '{api-version}'
+        version    : 'v8.0'
       });
         
       FB.AppEvents.logPageView();   
@@ -137,28 +138,36 @@
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
 
-     
-FB.getLoginStatus(function(response) {
-    
-
-    status: 'connected';
-    authResponse: {
-        accessToken: '...';
-        expiresIn:'...';
-        signedRequest:'...';
-        userID:'...'
-    }
-
-    statusChangeCallback(response);
-});
   </script>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" 
 src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0&appId=606106830674947&autoLogAppEvents=1" 
 nonce="jnBcDoBe"></script>
-  
-    
-    
+ <!--  <script>
+  $(()=>{
+    const objAuth = new Autentication()
+    $("fb-login-button").click(()=> objAuth.authCuentaFacebook());
+})
+
+
+</script>
+
+<script>
+    authCuentaFacebook(){
+        const provider = new firebase.auth.FacebookAuthProvider();
+
+        firebase.auth().signInWithPopup(provider).then(result => {
+            $('#avatar').attr('src', result.user.photoURL)
+            $('.modal').modal('close')
+            Materialize.toast('Bienvenido ${result.user.displayName}!!',4000)
+        })
+        .catch(error => {
+            console.error(error)
+            Materialize.toast('error:$',4000)
+        })
+    }
+</script> -->
+
 </body>
 
 
