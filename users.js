@@ -134,6 +134,7 @@ auth.onAuthStateChanged(user => {
                     let li = todoContainer.querySelector('[data-id=' + change.doc.id + ']');
                     todoContainer.removeChild(li);
                 }
+                
             })
         })
     }

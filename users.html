@@ -17,9 +17,11 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Tangerine|Lato|Gamja+Flower|Open+Sans|Roboto+Slab|Indie+Flower|Lobster|Open+Sans|Kosugi+Maru">
 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="user.css">
     </head>
+
 
 <body onload="loadbody();">
     <!-- date and time section -->
@@ -43,6 +45,29 @@
     <div class="container">
        <!-- <form autocomplete="off" class="form-group" id="form">
             <input type="text" class="form-control" id="todos" required><br>
+
+            <form action="users.html" target="_blank">
+
+                <p>
+              
+                  Categoria:<br>
+              
+                  <input type="checkbox" name="trabajo"> Trabajo<br>
+              
+                  <input type="checkbox" name="familia"> Familia<br>
+              
+                  <input type="checkbox" name="diversion"> Diversion<br>
+                  
+                  <input type="checkbox" name="salud"> Salud<br>
+              
+                </p>
+              
+                <button type="submit" class="btn btn-success btn-block">Añadir</button>
+              </form>
+            
+        </form>
+        
+
             <button type="submit" class="btn btn-success btn-block">Añadir</button>
             
         </form>-->
@@ -66,13 +91,47 @@
             </div>	
         </div>
 
-
     </div><br>
+    
 
     <!-- todos container -->
+    
     <div class="container todo-container" id="todo-container">
+        
+        <div class="contenedor">
+            <div class="row">
+                
+                <div class="c-md-12">
+                    <div class="share">
+                        
+                        <a href="http://www.facebook.com/sharer.php?u=www.todolist.com&t=To do list" target="_blank" class="facebook">Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?text=ToDoList&url=www.todolist.com&via=Tarea&hashtags=#miempresa" target="_blank" class="twitter">Twitter</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+                   
+                    
+                
+                
+        
+        
 
     </div>
+    
+    <div class="wrap">
+		<h1>Selecciona una categoria:</h1>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="ordenadores">Trabajo</a>
+				<a href="#" class="category_item" category="laptops">Familia</a>
+				<a href="#" class="category_item" category="smartphones">Diversion</a>
+			</div>
+			
+		</div>
+	</div>
 
      <!-- The core Firebase JS SDK is always required and must be listed first -->
      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -91,6 +150,7 @@
       messagingSenderId: "850682563527",
       appId: "1:850682563527:web:59e3cca8cf03bee5a6a7e2",
       measurementId: "G-CJ7FCMTMFX"
+      
     };
  
          firebase.initializeApp(firebaseConfig);
@@ -99,9 +159,11 @@
          const fs = firebase.firestore();
          const db = firebase.database();
      </script>
+     
  
 
     <script src="users.js"></script>
+    
 
 </body>
 
