@@ -25,9 +25,13 @@
 
 <body onload="loadbody();">
     <!-- date and time section -->
+<head>
 
-    
+
         <div class="my-container">
+            <div>
+                
+            </div>
             <h3>Bienvenido(a), <span id="username"></span></h3>
             <h5>Hagamos una lista</h5>
             <div class="date-time">
@@ -37,94 +41,82 @@
                 <span id="weekday">weekday</span>
             </div><br>
             <button class="btn btn-danger btn-sm" onclick="logout()">Salir</button>
-        </div><br>
-    
+
+
+            
+        </div>
+        
+
+        
+        <!-- todos container -->
+        
+        <div class="container todo-container" id="todo-container">
+            
+            <div class="contenedor">
+                <div class="row">
+                    
+                    <div class="c-md-12">
+                        <div class="share">
+                            
+                            <a href="http://www.facebook.com/sharer.php?u=www.todolist.com&t=To do list" target="_blank" class="facebook">Facebook</a><br>
+                            <a href="https://twitter.com/intent/tweet?text=ToDoList&url=www.todolist.com&via=Tarea&hashtags=#miempresa" target="_blank" class="twitter">Twitter</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
     
 
     <!-- todo-form -->  
    
         
+            <div class="container">
+                <h3 class="mt-4 text-center">Lista de Tareas</h3>		
+                <form autocomplete="off" id="form" class="form-group">
 
-           
+                    <input type="text" class="form-control" id="todos" required><br>
+                    <form action="users.html" target="_blank">
+
+                        <p>
+                      
+                          Categoria:<br>
+                      
+                          <input type="checkbox" name="trabajo"> Trabajo<br>
+                      
+                          <input type="checkbox" name="familia"> Familia<br>
+                      
+                          <input type="checkbox" name="diversion"> Diversion<br>
+                          
+                          <input type="checkbox" name="salud"> Salud<br>
+                      
+                        </p>
+                      
+                        <button type="submit" class="btn btn-success btn-block">Añadir</button>
+                      </form>
+                      <div class="container todo-container" id="todo-container">
+                </form>      	
+                
+            </div>
+    
+        
+        <!--<div class="wrap">
+            <h1>Selecciona una categoria:</h1>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <a href="#" class="category_item" category="all">Todo</a><br>
+                    <a href="#" class="category_item" category="ordenadores">Trabajo</a>
+                    <br></br>
+                    <a href="#" class="category_item" category="laptops">Familia</a> <br></br>
+                    <a href="#" class="category_item" category="smartphones">Diversion</a> <br></br>
+                </div>
+                
+            </div>
+        </div>-->
+
+        </head>          
             
         
-        <div class="container">
-            <h3 class="mt-4 text-center">Lista de Tareas</h3>		
-            <form id="form-crear" class="text-center my-4">
-                <input id="crear" type="text" class="form-control" placeholder="Ingrese la tarea">
-                <form action="users.html" target="_blank">
 
-                    <p>
-                  
-                      Categoria:<br>
-                  
-                      <input type="checkbox" name="trabajo"> Trabajo<br>
-                  
-                      <input type="checkbox" name="familia"> Familia<br>
-                  
-                      <input type="checkbox" name="diversion"> Diversion<br>
-                      
-                      <input type="checkbox" name="salud"> Salud<br>
-                  
-                    </p>
-                  
-                    <button type="submit" class="btn btn-success btn-block">Añadir</button>
-                  </form>
-                
-            </form>      	
-            <div class="shadow-lg p-3 mb-5 bg-body rounded">			
-                <form id="form-buscar">
-                    <input id="buscar" type="text" class="form-control" placeholder="Buscar...">
-                </form>							
-                <ul id="lista-tareas" class="list-group">
-                    <li class="list-group-item d-flex justify-content-between"><strong>Tarea 1</strong> <i class="fas fa-minus-circle borrar"></i></li>
-                    <li class="list-group-item d-flex justify-content-between"><strong>Tarea 2</strong> <i class="fas fa-minus-circle borrar"></i></li>
-                    <li class="list-group-item d-flex justify-content-between"><strong>Buscar comida</strong> <i class="fas fa-minus-circle borrar"></i></li>
-                </ul>
-            </div>	
-        </div>
-
-    
-    
-
-    <!-- todos container -->
-    
-    <div class="container todo-container" id="todo-container">
-        
-        <div class="contenedor">
-            <div class="row">
-                
-                <div class="c-md-12">
-                    <div class="share">
-                        
-                        <a href="http://www.facebook.com/sharer.php?u=www.todolist.com&t=To do list" target="_blank" class="facebook">Facebook</a>
-                        <a href="https://twitter.com/intent/tweet?text=ToDoList&url=www.todolist.com&via=Tarea&hashtags=#miempresa" target="_blank" class="twitter">Twitter</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-                   
-                    
-                
-                
-        
-        
-
-    </div>
-    
-    <div class="wrap">
-		<h1>Selecciona una categoria:</h1>
-		<div class="store-wrapper">
-			<div class="category_list">
-				<a href="#" class="category_item" category="all">Todo</a>
-				<a href="#" class="category_item" category="ordenadores">Trabajo</a>
-				<a href="#" class="category_item" category="laptops">Familia</a>
-				<a href="#" class="category_item" category="smartphones">Diversion</a>
-			</div>
-			
-		</div>
-	</div>
 
      <!-- The core Firebase JS SDK is always required and must be listed first -->
      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -156,7 +148,8 @@
  
 
     <script src="users.js"></script>
-    
+</head>
+      
 
 </body>
 
